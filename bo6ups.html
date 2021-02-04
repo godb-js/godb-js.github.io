@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Table.add(), .get() | GoDB.js</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="https://cdn.liqi.tech/docs/godb/GoDB%20logo.png">
+    <meta name="description" content="更好的前端本地储存方案">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="referrer" content="no-referrer">
+    
+    <link rel="preload" href="/assets/css/0.styles.251b4858.css" as="style"><link rel="preload" href="/assets/js/app.d8c6e819.js" as="script"><link rel="preload" href="/assets/js/2.42149626.js" as="script"><link rel="preload" href="/assets/js/13.9475391c.js" as="script"><link rel="prefetch" href="/assets/js/10.10323012.js"><link rel="prefetch" href="/assets/js/11.0e97e056.js"><link rel="prefetch" href="/assets/js/12.3086bfc8.js"><link rel="prefetch" href="/assets/js/14.ee60562d.js"><link rel="prefetch" href="/assets/js/15.e4e0ad73.js"><link rel="prefetch" href="/assets/js/16.0f435b4f.js"><link rel="prefetch" href="/assets/js/3.f730de4c.js"><link rel="prefetch" href="/assets/js/4.df3d58d9.js"><link rel="prefetch" href="/assets/js/5.3ec778bb.js"><link rel="prefetch" href="/assets/js/6.961d625e.js"><link rel="prefetch" href="/assets/js/7.a5af60b6.js"><link rel="prefetch" href="/assets/js/8.50222cb0.js"><link rel="prefetch" href="/assets/js/9.66dfcf58.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.251b4858.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">GoDB.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/li97cu.html" class="sidebar-link">前言</a></li><li><a href="/psmwrb.html" class="sidebar-link">基本概念</a></li><li><a href="/gbah32.html" class="sidebar-link">Hello World</a></li><li><section class="sidebar-group depth-0"><a href="/aaale8.html" class="sidebar-heading clickable open"><span>Table 操作</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/bo6ups.html" aria-current="page" class="active sidebar-link">Table.add(), .get()</a></li><li><a href="/kep5eg.html" class="sidebar-link">Table.addMany(), .consoleTable()</a></li><li><a href="/wuqxe1.html" class="sidebar-link">Table.find()</a></li><li><a href="/zplho7.html" class="sidebar-link">Table.put()</a></li><li><a href="/ewcs5z.html" class="sidebar-link">Table.delete()</a></li></ul></section></li><li><a href="/oy6id5.html" class="sidebar-link">Schema</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="table-add-get"><a href="#table-add-get" class="header-anchor">#</a> Table.add(), .get()</h1> <div data-lake-element="root" data-selection-2310303="%7B%22path%22%3A%5B%5B1%2C1%2C1%2C7%5D%2C%5B1%2C1%2C1%2C7%5D%5D%2C%22uuid%22%3A%222310303%22%2C%22active%22%3Atrue%7D" class="lake-content-editor-core lake-engine lake-typography-classic"><p data-lake-id="ed2e8f90d4667cb1f34c753571ec06bd" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><code>Table.add(data)</code> 用于添加数据</p><ul data-lake-id="c139b0af23e5c33e284347f277b9a43d" lake-indent="0" style="list-style-type:disc;margin:0px;padding-left:23px;font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;"><li data-lake-id="d42c0cffc1bacfe86af3b73931234086"><code>data</code> 为 JS 对象</li><li data-lake-id="fe5cd09317a299a33ae79ebdfb11575c"><code>data</code> 的 key 是数据库的字段，对应值是该字段的值</li></ul><p data-lake-id="0cb52be9f27f252096e88cd7102593aa" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><br></p><p data-lake-id="a20d224c568e48b9d67847a2c66a8c01_p_0" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><code>Table.get()</code> 用查找索引的方式，返回数据</p><ul data-lake-id="3a039e91e64ad9aeefe477265f3a1283" lake-indent="0" style="list-style-type:disc;margin:0px;padding-left:23px;font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;"><li data-lake-id="db970053b1f640e138c787b2146373ae">接受一个 id 或者索引作为输入</li><li data-lake-id="f0c4276bc67faf2b8aad85cea10c2913">然后在 Promise 里返回完整数据</li></ul><p data-lake-id="012daca9bb24d7044b9abb7a6c37e1f2" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><br></p><div data-card-type="block" data-lake-card="codeblock" id="v7ytx" data-language="javascript" class="lake-card-margin"><div><div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> GoDB <span class="token keyword">from</span> <span class="token string">'godb'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> testDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GoDB</span><span class="token punctuation">(</span><span class="token string">'testDB'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> user <span class="token operator">=</span> testDB<span class="token punctuation">.</span><span class="token function">table</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+user<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ name<span class="token operator">:</span> <span class="token string">'luke'</span><span class="token punctuation">,</span>
+ age<span class="token operator">:</span> <span class="token number">22</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>luke <span class="token operator">=</span><span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> user<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>luke<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 查，等价于 user.get({ id: luke.id })</span>
+ <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>luke <span class="token operator">=</span><span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>luke<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// {</span>
+<span class="token comment">//   id: 1,</span>
+<span class="token comment">//   name: 'luke',</span>
+<span class="token comment">//   age: 22</span>
+<span class="token comment">// } </span>
+</code></pre></div></div></div></div><p data-lake-id="4ef26cbcfce9e55a19405383a17f1534" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><br></p><p data-lake-id="b76616e7bd963b3ed6b579735dec6d39" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><code>user.get(1)</code> 等价于 <code>user.get({ id: 1 })</code></p><p data-lake-id="c98ca9938dde27d5e8e53c09a0f2bb7b" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><br></p><p data-lake-id="c010e8c1ed34284fb3accb54bf8c57d9" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;">当你使用 Schema 定义数据库的结构后，<code>Table.get()</code> 将可以使用 id 以外的字段</p><p data-lake-id="e9cd073bb1453212bda8b778c3fe7067" style="font-size:14px;color:rgb(38, 38, 38);line-height:1.74;letter-spacing:0.05em;outline-style:none;overflow-wrap:break-word;margin:0px;"><br></p><div data-card-type="block" data-lake-card="codeblock" id="FzfsU" data-language="javascript" class="lake-card-margin"><div><div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> GoDB <span class="token keyword">from</span> <span class="token string">'godb'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义数据库结构</span>
+<span class="token keyword">const</span> schema <span class="token operator">=</span> <span class="token punctuation">{</span>
+   <span class="token comment">// user 表：</span>
+   user<span class="token operator">:</span> <span class="token punctuation">{</span>
+       <span class="token comment">// user 表的字段：</span>
+       name<span class="token operator">:</span> String<span class="token punctuation">,</span>
+       age<span class="token operator">:</span> Number
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> testDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GoDB</span><span class="token punctuation">(</span><span class="token string">'testDB'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> schema <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 等价于 { schema: schema }</span>
+<span class="token keyword">const</span> user <span class="token operator">=</span> testDB<span class="token punctuation">.</span><span class="token function">table</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
+   name<span class="token operator">:</span> <span class="token string">'luke'</span>
+   age<span class="token operator">:</span> <span class="token number">22</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+user<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment">// 没问题</span>
+ <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> user<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'luke'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 定义schema后，就可以用id以外的字段获取数据</span>
+ <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>luke <span class="token operator">=</span><span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>luke<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// {</span>
+<span class="token comment">//   id: 1,</span>
+<span class="token comment">//   name: 'luke',</span>
+<span class="token comment">//   age: 22</span>
+<span class="token comment">// } </span>
+</code></pre></div></div></div></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/gbah32.html" class="prev">
+        Hello World
+      </a></span> <span class="next"><a href="/kep5eg.html">
+        Table.addMany(), .consoleTable()
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d8c6e819.js" defer></script><script src="/assets/js/2.42149626.js" defer></script><script src="/assets/js/13.9475391c.js" defer></script>
+  </body>
+</html>
