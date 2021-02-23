@@ -46,7 +46,7 @@ user<span class="token punctuation">.</span><span class="token function">add</sp
    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">const</span> testDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GoDB</span><span class="token punctuation">(</span><span class="token string">'testDB'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> schema <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 等价于 { schema: schema }</span>
+<span class="token keyword">const</span> testDB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GoDB</span><span class="token punctuation">(</span><span class="token string">'testDB'</span><span class="token punctuation">,</span> <span class="token punctuation"></span> schema <span class="token punctuation"></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> user <span class="token operator">=</span> testDB<span class="token punctuation">.</span><span class="token function">table</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">{</span>
